@@ -26,16 +26,16 @@ class YouTubePage extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
-                        'YouTube Channel Title',
+                        'Nexos Creator',
                         style: TextStyle(
-                          color: Colors.white,
+                          color: Colors.pinkAccent,
                           fontSize: 24,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       SizedBox(height: 8),
                       Text(
-                        'Channel Description goes here. It can be multiple lines long.',
+                        'Welcome to Nexos Creation! 🚀',
                         style: TextStyle(
                           color: Colors.white70,
                           fontSize: 16,

@@ -9,10 +9,10 @@ class DashboardPage extends StatelessWidget {
   final String description = 'Welcome to Nexos Creation!';
 
   final List<Map<String, String>> socialLinks = [
-    {'icon': 'assets/twitter.png', 'url': 'https://twitter.com'},
-    {'icon': 'assets/facebook.png', 'url': 'https://facebook.com'},
-    {'icon': 'assets/linkedin.png', 'url': 'https://linkedin.com'},
-    {'icon': 'assets/instagram.png', 'url': 'https://instagram.com'},
+    {'icon': 'assets/youtube.png', 'url': 'https://youtube.com/@nexoscreator'},
+    {'icon': 'assets/discord.png', 'url': 'https://discord.com/invite/ejfxG2Qpjk'},
+    {'icon': 'assets/twitter.png', 'url': 'https://twitter.com/nexoscreator'},
+    {'icon': 'assets/github.png', 'url': 'https://github.com/nexoscreator'},
   ];
 
   final List<Map<String, dynamic>> cardItems = [

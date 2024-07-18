@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'providers/theme_provider.dart';
 import 'dashboard_page.dart';
@@ -25,15 +24,9 @@ class NexosCreationApp extends StatelessWidget {
       title: 'Nexos Creation',
       themeMode: themeProvider.themeMode,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        textTheme: GoogleFonts.latoTextTheme(
-          Theme.of(context).textTheme,
-        ),
+        primarySwatch: Colors.pink,
       ),
       darkTheme: ThemeData.dark().copyWith(
-        textTheme: GoogleFonts.latoTextTheme(
-          ThemeData.dark().textTheme,
-        ),
       ),
       home: MainPage(),
     );
