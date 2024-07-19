@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class SettingsPage extends StatefulWidget {
+  const SettingsPage({super.key});
+
   @override
   _SettingsPageState createState() => _SettingsPageState();
 }
@@ -12,19 +14,19 @@ class _SettingsPageState extends State<SettingsPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Settings'),
+        title: const Text('Settings'),
       ),
       body: SingleChildScrollView(
-        padding: EdgeInsets.all(16.0),
+        padding: const EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             _buildLoginComponent(),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             _buildDarkModeCard(),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             _buildExperimentalFeature(),
-            SizedBox(height: 20),
+            const SizedBox(height: 20),
             _buildAboutApp(),
           ],
         ),
@@ -39,31 +41,31 @@ class _SettingsPageState extends State<SettingsPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text(
+            const Text(
               'Login',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 10),
-            TextField(
+            const SizedBox(height: 10),
+            const TextField(
               decoration: InputDecoration(
                 labelText: 'Email',
                 border: OutlineInputBorder(),
               ),
             ),
-            SizedBox(height: 10),
-            TextField(
+            const SizedBox(height: 10),
+            const TextField(
               decoration: InputDecoration(
                 labelText: 'Password',
                 border: OutlineInputBorder(),
               ),
               obscureText: true,
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             ElevatedButton(
               onPressed: () {
                 // Handle login logic
               },
-              child: Text('Login'),
+              child: const Text('Login'),
             ),
           ],
         ),
@@ -74,7 +76,7 @@ class _SettingsPageState extends State<SettingsPage> {
   Widget _buildDarkModeCard() {
     return Card(
       child: ListTile(
-        title: Text('Dark Mode'),
+        title: const Text('Dark Mode'),
         trailing: Switch(
           value: _isDarkMode,
           onChanged: (value) {
@@ -94,21 +96,21 @@ class _SettingsPageState extends State<SettingsPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            Text(
+            const Text(
               'Experimental Feature',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: 10),
-            Text(
+            const SizedBox(height: 10),
+            const Text(
               'This is an experimental feature that might change or be removed in future updates.',
               style: TextStyle(fontSize: 16),
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             ElevatedButton(
               onPressed: () {
                 // Handle experimental feature logic
               },
-              child: Text('Try Experimental Feature'),
+              child: const Text('Try Experimental Feature'),
             ),
           ],
         ),
@@ -117,9 +119,9 @@ class _SettingsPageState extends State<SettingsPage> {
   }
 
   Widget _buildAboutApp() {
-    return Card(
+    return const Card(
       child: Padding(
-        padding: const EdgeInsets.all(16.0),
+        padding: EdgeInsets.all(16.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[

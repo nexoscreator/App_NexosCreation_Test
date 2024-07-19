@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:provider/provider.dart';
 import 'providers/theme_provider.dart';
 import 'dashboard_page.dart';
@@ -7,15 +8,19 @@ import 'chat_page.dart';
 import 'settings_page.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  MobileAds.instance.initialize(); 
   runApp(
     ChangeNotifierProvider(
       create: (_) => ThemeProvider(),
-      child: NexosCreationApp(),
+      child: const NexosCreationApp(),
     ),
   );
 }
 
 class NexosCreationApp extends StatelessWidget {
+  const NexosCreationApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     final themeProvider = Provider.of<ThemeProvider>(context);
@@ -28,12 +33,14 @@ class NexosCreationApp extends StatelessWidget {
       ),
       darkTheme: ThemeData.dark().copyWith(
       ),
-      home: MainPage(),
+      home: const MainPage(),
     );
   }
 }
 
 class MainPage extends StatefulWidget {
+  const MainPage({super.key});
+
   @override
   _MainPageState createState() => _MainPageState();
 }
@@ -42,9 +49,9 @@ class _MainPageState extends State<MainPage> {
   int _currentIndex = 0;
   final List<Widget> _pages = [
     DashboardPage(),
-    YouTubePage(),
-    ChatPage(),
-    SettingsPage(),
+    const YouTubePage(),
+    const ChatPage(),
+    const SettingsPage(),
   ];
 
   void _onTabTapped(int index) {
@@ -57,17 +64,17 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Nexos Creation'),
+        title: const Text('Nexos Creation'),
       ),
       body: _pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
         onTap: _onTabTapped,
         selectedItemColor: Colors.pink,
-        unselectedItemColor: Color.fromRGBO(229, 150, 180, 1),
+        unselectedItemColor: const Color.fromRGBO(229, 150, 180, 1),
         backgroundColor: Colors.white,
         type: BottomNavigationBarType.shifting,
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.dashboard),
             label: 'Dashboard',

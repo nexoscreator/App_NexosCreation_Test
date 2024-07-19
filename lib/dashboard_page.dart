@@ -82,15 +82,15 @@ class DashboardPage extends StatelessWidget {
                   children: [
                     Text(
                       title,
-                      style: TextStyle(
+                      style: const TextStyle(
                           color: Colors.white,
                           fontSize: 24,
                           fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     Text(
                       description,
-                      style: TextStyle(color: Colors.white, fontSize: 16),
+                      style: const TextStyle(color: Colors.white, fontSize: 16),
                     ),
                   ],
                 ),
@@ -105,7 +105,7 @@ class DashboardPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: socialLinks
                       .map((link) => IconButton(
-                            icon: Container(
+                            icon: SizedBox(
                               width: 30, // Set the width here
                               height: 30, // Set the height here
                               child: Image.asset(link['icon']!), 
@@ -114,11 +114,11 @@ class DashboardPage extends StatelessWidget {
                           ))
                       .toList(),
                 ),
-                SizedBox(height: 25),
+                const SizedBox(height: 25),
                 GridView.builder(
                   shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  physics: const NeverScrollableScrollPhysics(),
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 1,
                     childAspectRatio: 9 / 3,
                   ),
@@ -133,17 +133,17 @@ class DashboardPage extends StatelessWidget {
                         ),
                       ),
                       child: Card(
-                        margin: EdgeInsets.all(8),
+                        margin: const EdgeInsets.all(8),
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Icon(item['icon'] as IconData),
-                              SizedBox(height: 10),
+                              const SizedBox(height: 10),
                               Text(item['title']!,
-                                  style: TextStyle(fontWeight: FontWeight.bold)),
-                              SizedBox(height: 5),
+                                  style: const TextStyle(fontWeight: FontWeight.bold)),
+                              const SizedBox(height: 5),
                               Text(item['description']!,
                                   textAlign: TextAlign.center),
                             ],

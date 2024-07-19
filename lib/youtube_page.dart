@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class YouTubePage extends StatelessWidget {
+  const YouTubePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,7 +27,7 @@ class YouTubePage extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text(
+                      const Text(
                         'Nexos Creator',
                         style: TextStyle(
                           color: Colors.pinkAccent,
@@ -33,19 +35,19 @@ class YouTubePage extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      SizedBox(height: 8),
-                      Text(
+                      const SizedBox(height: 8),
+                      const Text(
                         'Welcome to Nexos Creation! 🚀',
                         style: TextStyle(
                           color: Colors.white70,
                           fontSize: 16,
                         ),
                       ),
-                      Spacer(),
+                      const Spacer(),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Row(
+                          const Row(
                             children: [
                               CircleAvatar(
                                 backgroundImage: NetworkImage('https://via.placeholder.com/150'), // Channel logo
@@ -76,7 +78,7 @@ class YouTubePage extends StatelessWidget {
                           ),
                           ElevatedButton(
                             onPressed: () {},
-                            child: Text('Subscribe'),
+                            child: const Text('Subscribe'),
                             // style: ElevatedButton.styleFrom(
                               // primary: Colors.red,
                             // ),
@@ -89,8 +91,8 @@ class YouTubePage extends StatelessWidget {
               ),
             ],
           ),
-          Padding(
-            padding: const EdgeInsets.all(16.0),
+          const Padding(
+            padding: EdgeInsets.all(16.0),
             child: Column(
               children: [
                 VideoCard(
@@ -122,7 +124,7 @@ class VideoCard extends StatelessWidget {
   final String title;
   final String url;
 
-  const VideoCard({
+  const VideoCard({super.key, 
     required this.thumbnailUrl,
     required this.title,
     required this.url,
@@ -154,7 +156,7 @@ class VideoCard extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Text(
                 title,
-                style: TextStyle(
+                style: const TextStyle(
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
                 ),

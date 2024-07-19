@@ -4,13 +4,13 @@ import 'package:webview_flutter/webview_flutter.dart';
 class WebViewPage extends StatelessWidget {
   final String url;
 
-  WebViewPage({required this.url});
+  const WebViewPage({super.key, required this.url});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('WebView'),
+        title: const Text('WebView'),
       ),
       body: WebView(
         initialUrl: url,

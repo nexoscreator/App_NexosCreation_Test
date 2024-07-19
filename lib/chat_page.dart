@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class ChatPage extends StatefulWidget {
+  const ChatPage({super.key});
+
   @override
   _ChatPageState createState() => _ChatPageState();
 }
@@ -22,7 +24,7 @@ class _ChatPageState extends State<ChatPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Community Chat'),
+        title: const Text('Community Chat'),
       ),
       body: Column(
         children: <Widget>[
@@ -43,16 +45,16 @@ class _ChatPageState extends State<ChatPage> {
                 Expanded(
                   child: TextField(
                     controller: _controller,
-                    decoration: InputDecoration(
+                    decoration: const InputDecoration(
                       labelText: 'Type a message',
                       border: OutlineInputBorder(),
                     ),
                   ),
                 ),
-                SizedBox(width: 8),
+                const SizedBox(width: 8),
                 ElevatedButton(
                   onPressed: _sendMessage,
-                  child: Text('Send'),
+                  child: const Text('Send'),
                 ),
               ],
             ),
