@@ -10,7 +10,10 @@ class DashboardPage extends StatelessWidget {
 
   final List<Map<String, String>> socialLinks = [
     {'icon': 'assets/youtube.png', 'url': 'https://youtube.com/@nexoscreator'},
-    {'icon': 'assets/discord.png', 'url': 'https://discord.com/invite/ejfxG2Qpjk'},
+    {
+      'icon': 'assets/discord.png',
+      'url': 'https://discord.com/invite/ejfxG2Qpjk'
+    },
     {'icon': 'assets/twitter.png', 'url': 'https://twitter.com/nexoscreator'},
     {'icon': 'assets/github.png', 'url': 'https://github.com/nexoscreator'},
   ];
@@ -60,6 +63,8 @@ class DashboardPage extends StatelessWidget {
     },
   ];
 
+  DashboardPage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -108,7 +113,7 @@ class DashboardPage extends StatelessWidget {
                             icon: SizedBox(
                               width: 30, // Set the width here
                               height: 30, // Set the height here
-                              child: Image.asset(link['icon']!), 
+                              child: Image.asset(link['icon']!),
                             ),
                             onPressed: () => _launchURL(link['url']!),
                           ))
@@ -142,7 +147,8 @@ class DashboardPage extends StatelessWidget {
                               Icon(item['icon'] as IconData),
                               const SizedBox(height: 10),
                               Text(item['title']!,
-                                  style: const TextStyle(fontWeight: FontWeight.bold)),
+                                  style: const TextStyle(
+                                      fontWeight: FontWeight.bold)),
                               const SizedBox(height: 5),
                               Text(item['description']!,
                                   textAlign: TextAlign.center),

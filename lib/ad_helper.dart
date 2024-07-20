@@ -37,7 +37,7 @@ class AdHelper {
   static void loadInterstitialAd() {
     InterstitialAd.load(
       adUnitId: interstitialAdUnitId,
-      request: AdRequest(),
+      request: const AdRequest(),
       adLoadCallback: InterstitialAdLoadCallback(
         onAdLoaded: (InterstitialAd ad) {
           _interstitialAd = ad;
@@ -66,7 +66,7 @@ class AdHelper {
   static void loadRewardedAd() {
     RewardedAd.load(
       adUnitId: rewardedAdUnitId,
-      request: AdRequest(),
+      request: const AdRequest(),
       rewardedAdLoadCallback: RewardedAdLoadCallback(
         onAdLoaded: (RewardedAd ad) {
           _rewardedAd = ad;
